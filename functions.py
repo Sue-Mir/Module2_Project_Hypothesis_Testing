@@ -59,6 +59,7 @@ def find_outliers_Z(data):
     """
     import scipy.stats as stats
     import numpy as np
+    import pandas as pd
     ## Calculate z-scores
     zs = stats.zscore(data)
     
@@ -70,7 +71,6 @@ def find_outliers_Z(data):
         return pd.Series(idx_outs,index=data.index)
     else:
         return pd.Series(idx_outs)
-    
     
     
 def find_outliers_IQR(data):
@@ -110,19 +110,20 @@ def find_outliers_IQR(data):
 def prep_data_for_tukeys(data):
     """Accepts a dictionary with group names as the keys 
     and pandas series as the values. 
-    
     Returns a dataframe ready for tukeys test:
     - with a 'data' column and a 'group' column for sms.stats.multicomp.pairwise_tukeyhsd 
-    
     Example Use:
     df_tukey = prep_data_for_tukeys(grp_data)
     tukey = sms.stats.multicomp.pairwise_tukeyhsd(df_tukey['data'], df_tukey['group'])
     tukey.summary()
     """
+    import pandas as pd
     df_tukey = pd.DataFrame(columns=['data','group'])
-
     for k,v in  data.items():
         grp_df = v.rename('data').to_frame() 
         grp_df['group'] = k
-        df_tukey=pd.concat([df_tukey,grp_df],axis=0)
+        df_tukey=pd.concat([df_tukey, grp_df],axis=0)
+    ## New lines added to ensure compatibility with tukey's test
+    df_tukey['group'] = df_tukey['group'].astype('str')
+    df_tukey['data'] = df_tukey['data'].astype('float')
     return df_tukey
