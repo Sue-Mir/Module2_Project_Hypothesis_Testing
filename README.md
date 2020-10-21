@@ -1,5 +1,5 @@
 
-# Hypothesis Testing - Northwind database
+# Module 2 -  Hypothesis Testing - Northwind database
 
 The goal of the project is to query the Northwind database to get the data needed to perform a statistical analysis. In this statistical analysis, a hypothesis test will be perfomed to answer the following questions:
 
