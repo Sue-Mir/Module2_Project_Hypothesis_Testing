@@ -17,5 +17,7 @@ Filename:  Student_HypothesisIV.pynb
 Hypothesis IV : Does the order month have a significant effect on the quantity on orders for that month?
 Furthermore, it will be specified if this is one-tail or a two-tail test.
 
+The database contains the sales data for Northwind Traders, a demonstrative speciality foods export/import company provided by Microsoft.
+
 Project Completion Date:  02/03/2020
 
