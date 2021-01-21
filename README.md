@@ -1,9 +1,8 @@
 
 # Module 2 -  Hypothesis Testing - Northwind database
 
-The goal of the project is to query the Northwind database to get the data needed to perform a statistical analysis. In this statistical analysis, a hypothesis test will be perfomed to answer the following questions:
+The goal of the project is to query the Northwind database to extract the data needed to perform a statistical analysis. In this statistical analysis, a hypothesis test will be perfomed to answer the following questions:
 
-## Project Modules
 #### Filename:  Student_HypothesisI.pynb
 Hypothesis I : Does discount have a significant effect on quantity of an order?
 
