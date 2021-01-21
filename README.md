@@ -22,6 +22,7 @@ The database contains the sales data for Northwind Traders, a demonstrative spec
 ![header](Northwind_ERD.png)
 
 ## Hypothesis Testing Overview
+![header](Process_Diagram1.png)
 
 Project Completion Date:  02/03/2020
 
